@@ -1,0 +1,25 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kinopoisk-api
+    username: postgres
+    password: 6270
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/databasechangelog.xml
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+  application:
+    name: MicroserviceB
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+kinopoisk-api:
+  key: DTHXQ7K-J51MPKZ-QESE3Z9-2E9SJK3
+  base-url: https://api.kinopoisk.dev
+application:
+  base-url: /api/v1/movies

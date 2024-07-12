@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: MicroserviceA
+server:
+  port: 8081
+springdoc:
+  api-docs:
+    path: /api-docs
+application:
+  base-url: /api/v1/movies
+microservice-b:
+  base-url: http://localhost:8082/api/v1/movies
